@@ -1,3 +1,20 @@
 // Font stacks
 $stack-primary: 'Roboto', sans-serif;
 $stack-secondary: 'Roboto Slab', serif;
+
+// Color Variables
+$primary-color: #31A099;
+$secondary-color: #18494C;
+$success: #29BBA0;
+$error: #FDA671;
+$warning: #F14334;
+$info: #E3E38C;
+
+// Button Colors
+$button-color: (
+  'default': $secondary-color,
+  'success': $success,
+  'error': $error,
+  'warning': $warning,
+  'info': $info,
+);
