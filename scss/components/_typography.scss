@@ -1,0 +1,18 @@
+// Web Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab');
+
+// heading styles
+.headline--primary {
+  font-family: $stack-secondary;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-left: 1em;
+}
+
+.headline--secondary {
+  font-family: $stack-secondary;
+  font-weight: lighter;
+  margin-bottom: 2em;
+  margin-block-start: 0px;
+  margin-block-end: auto;
+}
