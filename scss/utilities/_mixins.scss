@@ -1,0 +1,8 @@
+// Button Colors
+@mixin button-color($map) {
+    @each $button, $color in $map {
+      &--#{$button} {
+        background-color: $color;
+      }
+    }
+  }

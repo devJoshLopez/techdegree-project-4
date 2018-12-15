@@ -1,0 +1,36 @@
+.nav {
+    margin-bottom: 3em;
+    list-style-type: none;
+  padding-left: 0;
+  }
+  
+  .nav__item {
+    border-radius: 5px;
+    text-align: center;
+    margin-right: 5px;
+    width: 100%;
+  
+    &:first-child {
+      background-color: $primary-color;
+      & a {
+        color: white;
+      }
+    }
+  
+    &:hover {
+      background-color: $primary-color;
+      & a {
+        color: white;
+      }
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
+  
+  .nav__item a {
+    display: block;
+    padding: 1em .5em;
+    text-decoration: none;
+    color: $black;
+  }

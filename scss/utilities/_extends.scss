@@ -1,0 +1,35 @@
+%btn {
+    border: none;
+    border-radius: 0.35em;
+    color: $white;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    padding: 0.75em 1.5em;
+    width: 100%;
+    &:hover {
+      opacity: 0.8;
+    }
+    &:active {
+      opacity: intial;  
+    }
+  }
+  
+  // Clearfix
+  %clearfix {
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+  
+  // Center elements on the page
+  .centered {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
