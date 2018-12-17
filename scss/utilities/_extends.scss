@@ -1,35 +1,48 @@
 %btn {
-    border: none;
-    border-radius: 0.35em;
-    color: $white;
-    cursor: pointer;
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    margin-bottom: 1em;
-    padding: 0.75em 1.5em;
-    width: 100%;
-    &:hover {
-      opacity: 0.8;
-    }
-    &:active {
-      opacity: intial;  
-    }
+  border: none;
+  border-radius: 0.35em;
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+  padding: 0.6em 1.5em;
+  width: 100%;
+  outline: none !important;
+
+  &:hover {
+    opacity: 0.8;
+    animation-name: bounceIn;
+    animation-duration: 450ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
   }
-  
-  // Clearfix
-  %clearfix {
-    &:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
+
+  &:active {
+    opacity: intial;
   }
-  
-  // Center elements on the page
-  .centered {
-    float: none;
-    margin-left: auto;
-    margin-right: auto;
+}
+
+// Clearfix
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
   }
+}
+
+// Center elements on the page
+.centered {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Grid elements padding and space between
+%grid-shape {
+  padding: 10px 0;
+  border-radius: 5px;
+}

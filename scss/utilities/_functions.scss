@@ -1,0 +1,5 @@
+// Grid width context
+@function g-context($g-col-w, $g-col-total, $g-gutter-w) {
+  $g-context: ($g-col-w * $g-col-total) + ($g-gutter-w * ($g-col-total - 1));
+  @return $g-context;
+}

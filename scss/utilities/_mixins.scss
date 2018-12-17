@@ -1,8 +1,58 @@
 // Button Colors
 @mixin button-color($map) {
-    @each $button, $color in $map {
-      &--#{$button} {
-        background-color: $color;
-      }
+
+  @each $button,
+  $color in $map {
+    &--#{$button} {
+      background-color: $color;
     }
   }
+}
+
+// Funkmaster flex container
+@mixin flex ($disp: flex,
+$dir: null,
+$wrap: null,
+$just: null,
+$basis: null,
+$flex: null) {
+  display: $disp;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  justify-content: $just;
+  flex-basis: $basis;
+  flex-grow: $flex;
+  margin: 5px;
+  text-align: center;
+  @content;
+}
+
+// Adjacent sibling margins
+@mixin double($margin: 1em) {
+  &+& {
+    margin-left: $margin;
+    @content;
+  }
+}
+
+// Media Queries
+@mixin mq($break) {
+  $value: map-get($breakpoints, $break);
+  $xs: map-get($breakpoints, 'xs');
+
+  @if $value==null {
+    @warn "Hey! #{$break} is not a valid breakpoint name.";
+  }
+
+  @else if $value < $xs {
+    @media (max-width: $value) {
+      @content;
+    }
+  }
+
+  @else {
+    @media (min-width: $value) {
+      @content;
+    }
+  }
+}

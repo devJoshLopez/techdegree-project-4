@@ -5,8 +5,10 @@
 .headline--primary {
   font-family: $stack-secondary;
   font-weight: bold;
+  color: $primary-color;
   line-height: 1.2;
   margin-left: 1em;
+  text-align: left;
 }
 
 .headline--secondary {
@@ -14,4 +16,25 @@
   margin-bottom: 2em;
   margin-block-start: 0px;
   margin-block-end: auto;
+  text-align: left;
+  font-weight: bold;
+}
+
+.link {
+  color: $secondary-color;
+  font-weight: bold;
+  text-decoration: none;
+
+  &:hover {
+    border-bottom: 1px solid;
+  }
+}
+
+.blockquote {
+  border-left: 10px solid $primary-color;
+  border-radius: 5px;
+  font-size: 1.35rem;
+  font-style: italic;
+  line-height: 1.3;
+  padding: 0 1em;
 }

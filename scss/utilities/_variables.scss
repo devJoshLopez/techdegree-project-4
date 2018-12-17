@@ -1,22 +1,44 @@
 // Font stacks
-$stack-primary: 'Roboto', sans-serif;
-$stack-secondary: 'Roboto Slab', serif;
+$stack-primary: 'Roboto',
+sans-serif;
+$stack-secondary: 'Roboto Slab',
+serif;
 
 // Color Variables
-$primary-color: #31A099;
-$secondary-color: #18494C;
-$success: #29BBA0;
-$error: #FDA671;
-$warning: #F14334;
-$info: #E3E38C;
+$primary-color: #58E1C1;
+$secondary-color: #51DDFC;
+$success: #63CC82;
+$error: #E4757A;
+$warning: #FD7856;
+$info: #927BC1;
 $white: #fff;
 $black: #000;
 
 // Button Colors
-$button-color: (
-  'default': $secondary-color,
-  'success': $success,
-  'error': $error,
-  'warning': $warning,
-  'info': $info,
+$button-color: ('default': $secondary-color,
+'success': $success,
+'error': $error,
+'warning': $warning,
+'info': $info,
 );
+
+// Grid Colors
+$grid-color: ('12': $primary-color,
+'6': #3FABCA,
+'4': $secondary-color,
+'3': #ca7ee6,
+'5': #6bc786,
+'7': #dd6d73,
+'8': $warning, 
+);
+
+// Grid
+$g-col-w: 87px;
+$g-gutter-w: 10px;
+$g-col-total: 12;
+$g-max-width: 1050px;
+
+// Breakpoints
+$breakpoints: ('xs': 480px,
+'lg': 769px,
+'mw': 1100px);

@@ -1,22 +1,36 @@
 button {
-    text-align: center;
+  text-align: center;
 }
-  
+
 .btn {
-    @include button-color($button-color);
-    &--default {
-      @extend %btn;
-    }
-    &--success {
-      @extend %btn;
-    }
-    &--error {
-      @extend %btn;
-    }
-    &--warning {
-      @extend %btn;
-    }
-    &--info {
-      @extend %btn;
-    }
+  @include button-color($button-color);
+
+  &--default {
+    @extend %btn;
   }
+
+  &--success {
+    @extend %btn;
+  }
+
+  &--error {
+    @extend %btn;
+  }
+
+  &--warning {
+    @extend %btn;
+  }
+
+  &--info {
+    @extend %btn;
+  }
+}
+
+// When screen is 1400px or larger, display buttons in a line
+@include mq('lg') {
+  .grid__col--12 button {
+    display: inline-block;
+    margin: 0 .5em;
+    width: 17%;
+  }
+}

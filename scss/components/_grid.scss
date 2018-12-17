@@ -1,0 +1,67 @@
+.container {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 1100px;
+  width: 90%;
+}
+
+.card {
+  text-align: left;
+  margin: 0 auto;
+  background: lighten($color: #000000, $amount: 98%);
+  padding: 1em;
+}
+
+// Grid background
+@each $size,
+$color in $grid-color {
+  .grid__col--#{$size}.theme__colors {
+    background-color: $color;
+  }
+}
+
+// Grid container
+.grid__row {
+  @extend %clearfix;
+  margin-bottom: 1.5em;
+
+  // Nested grid width
+  [class*="grid__col--"]>& {
+    width: 100%;
+  }
+}
+
+// Grid columns
+@include mq('lg') {
+  @for $i from 1 through $g-col-total {
+    $context: g-context($g-col-w, $g-col-total, $g-gutter-w) !global;
+    $target: ($g-col-w * $i) + ($g-gutter-w * ($i - 1));
+
+    // Column modifier classes
+    .grid__col--#{$i} {
+      width: percentage($target / $context);
+    }
+  }
+}
+
+// Column styles
+@include mq('lg') {
+  .grid__col--7.centered {
+    float: none;
+  }
+}
+
+[class^="grid__col--"] {
+  @extend %grid-shape;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  text-align: left;
+
+  @include mq('lg') {
+    @include double(percentage($g-gutter-w / $context));
+    float: left;
+    margin: 1em auto;
+    min-height: 1px;
+    text-align: center;
+  }
+}
